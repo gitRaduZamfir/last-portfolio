@@ -1,0 +1,14 @@
+.link {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.linkBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  color: var(--primaryText);
+}

@@ -1,0 +1,12 @@
+.projects {
+  background-color: var(--primaryBg);
+  height: 100%;
+}
+
+.projects-container {
+  padding: 4rem 3rem;
+}
+
+.project-text {
+  margin-bottom: 4rem;
+}

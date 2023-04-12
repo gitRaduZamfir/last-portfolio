@@ -1,0 +1,137 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar {
+  position: fixed;
+  font-family: 'PT Sans';
+  padding: 0 2rem;
+  height: 10svh;
+  width: 100svw;
+  box-shadow: 0 2px 4px 0 rgba(160, 160, 160, 0.2),
+    0 2px 8px 0 rgba(160, 160, 160, 0.2);
+  z-index: 100;
+  background-color: white;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 3rem;
+  z-index: 70;
+  margin-top: 10px;
+}
+
+.close-icon {
+  display: none;
+  font-size: 3rem;
+  z-index: 70;
+  margin-top: 10px;
+}
+
+.logo {
+  color: var(--primaryText);
+  font-weight: 700;
+  font-family: 'Dosis';
+  font-size: 2rem;
+}
+
+.nav-elements ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.nav-elements ul a {
+  font-size: 1.2rem;
+  font-family: 'Rubik';
+  color: var(--primaryText);
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+.tech {
+  margin-bottom: 10rem;
+}
+
+.nav-elements ul a.active {
+  font-weight: 500;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    height: 15svh;
+  }
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .nav-elements ul li a {
+    font-size: 2rem;
+  }
+
+  .navbar {
+    height: 10svh;
+  }
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    padding-bottom: 0;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .close-icon.active {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-icon.active {
+    display: none;
+  }
+
+  .nav-elements {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    background-color: #ffffff;
+    width: 0px;
+    height: 100svh;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  .nav-elements.active {
+    width: 100%;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-elements ul li {
+    margin: 20px 0;
+  }
+}

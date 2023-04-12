@@ -1,0 +1,30 @@
+.footer {
+  background-color: var(--primaryText);
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 3rem;
+}
+
+.btnSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem 1rem;
+  margin-left: 1rem;
+}
+
+.textSection h3 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 550px) {
+  .btnSection {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}

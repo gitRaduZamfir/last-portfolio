@@ -1,0 +1,15 @@
+.techContainer {
+  display: flex;
+  align-items: center;
+  font-family: 'Mulish', sans-serif;
+}
+
+.techIcon {
+  border-radius: 100%;
+  padding: 12px;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 4px 0 rgba(160, 160, 160, 0.2),
+    0 2px 8px 0 rgba(160, 160, 160, 0.2);
+}
