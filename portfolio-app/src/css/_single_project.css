@@ -28,6 +28,8 @@
   width: 100%;
   height: 25rem;
   margin-left: 1rem;
+  
+
 }
 
 .description {
@@ -44,6 +46,7 @@
   transform: translateY(0);
   transition: transform 10s ease;
   transform-origin: bottom;
+  
 }
 
 .show-section:hover img {
@@ -99,5 +102,8 @@
 @media screen and (max-width: 550px) {
   .show-section:hover img {
     transform: translateY(-70%);
+  }
+  .show-section{
+    margin: auto;
   }
 }
