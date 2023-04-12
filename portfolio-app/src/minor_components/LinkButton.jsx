@@ -1,16 +1,15 @@
 import styles from './LinkButton.module.css';
 
-function LinkButton({ children, color, link }) {
+function LinkButton({ children, color }) {
   return (
     <div className={styles.linkBtn}>
-      <a
+      <i
         className={styles.link}
         style={{ color: color }}
-        href={link}
         target="_blanc"
       >
         {children}
-      </a>
+      </i>
     </div>
   );
 }

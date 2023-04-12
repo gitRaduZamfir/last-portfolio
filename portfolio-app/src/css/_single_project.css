@@ -1,57 +1,46 @@
-.single-container {
+.single-project-container {
   background-color: #fff;
+  max-width: 900px;
+  height: auto;
   border-radius: 20px;
   box-shadow: 0 2px 4px 0 rgba(160, 160, 160, 0.2),
     0 2px 8px 0 rgba(160, 160, 160, 0.2);
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: 60% 40%;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  margin: auto;
-  max-width: 900px;
+  margin: 4rem 3rem;
 }
 
-.project-text-section {
+/*-----IMAGE-----*/
+
+.project-img-container {
+  max-height: 20rem;
+  border-radius: 20px;
+  margin: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(160, 160, 160, 0.2),
+    0 2px 8px 0 rgba(160, 160, 160, 0.2);
+  overflow: hidden;
+}
+
+.project-img-container img {
+  transform: translateY(0);
+  width: 100%;
+  object-fit: cover;
+  transition: transform 10s ease;
+}
+
+.project-img-container:hover img {
+  transform: translateY(-80%);
+}
+
+/*-----TEXT-----*/
+
+.description-section {
+  margin: 2rem;
+}
+.description-section h2 {
   text-align: center;
 }
 
-.show-section {
-  position: relative;
-  background-color: #fff;
-  overflow: hidden;
-  box-shadow: 0 2px 4px 0 rgba(160, 160, 160, 0.2),
-    0 2px 8px 0 rgba(160, 160, 160, 0.2);
-  border-radius: 20px;
-  width: 100%;
-  height: 25rem;
-  margin-left: 1rem;
-  
-
-}
-
-.description {
-  margin: 0 2rem;
-}
-
-.show-section img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  transform: translateY(0);
-  transition: transform 10s ease;
-  transform-origin: bottom;
-  
-}
-
-.show-section:hover img {
-  transform: translateY(-80%);
-}
+/*-----BUTONS-----*/
 
 .btn-section {
   display: flex;
@@ -87,23 +76,10 @@
   transition: 100ms ease-in;
 }
 
-@media screen and (max-width: 900px) {
-  .single-container {
-    grid-template-columns: 1fr;
-  }
-  .show-section {
-    margin-left: 0;
-  }
-  .show-section:hover img {
-    transform: translateY(-70%);
-  }
-}
+/*-----MEDIA-----*/
 
 @media screen and (max-width: 550px) {
-  .show-section:hover img {
+  .project-img-container:hover img {
     transform: translateY(-70%);
-  }
-  .show-section{
-    margin: auto;
   }
 }

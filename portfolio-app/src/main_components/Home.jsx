@@ -22,16 +22,16 @@ function Home() {
             Front-End Developer.
           </p>
           <div className="btnSection">
-            <LinkButton
-              children={<BsLinkedin />}
-              color={'#0B5FA2'}
-              link={'https://www.linkedin.com/in/radu-zamfir-713788271/'}
-            />
-            <LinkButton
-              children={<BsGithub />}
-              color={'#000000'}
-              link={'https://github.com/gitRaduZamfir'}
-            />
+            <a
+              href="https://www.linkedin.com/in/radu-zamfir-713788271/"
+              target="_blank"
+            >
+              <LinkButton children={<BsLinkedin />} color={'#0B5FA2'} />
+            </a>
+            <a href="https://github.com/gitRaduZamfir" target="-blanc">
+              {' '}
+              <LinkButton children={<BsGithub />} color={'#000000'} />
+            </a>
           </div>
         </div>
         <div className="imgContainer">

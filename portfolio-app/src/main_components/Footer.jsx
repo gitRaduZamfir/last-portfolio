@@ -10,26 +10,34 @@ function Footer() {
           <h3>Copyright © 2023. All rights are reserved</h3>
         </div>
         <div className={styles.btnSection}>
-          <LinkButton
-            children={<BsFacebook />}
-            color={'#ffffff'}
-            link={'https://www.facebook.com/RaduZamfir23'}
-          />
-          <LinkButton
-            children={<BsTelegram />}
-            color={'#ffffff'}
-            link={'https://t.me/raduzamfir23'}
-          />
-          <LinkButton
-            children={<BsGithub />}
-            color={'#ffffff'}
-            link={'https://github.com/gitRaduZamfir'}
-          />
-          <LinkButton
-            children={<BsLinkedin />}
-            color={'#ffffff'}
-            link={'https://www.linkedin.com/in/radu-zamfir-713788271/'}
-          />
+          <a
+            href="http://www.facebook.com/RaduZamfir23"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkButton children={<BsFacebook />} color={'#ffffff'} />
+          </a>
+          <a
+            href="http://t.me/raduzamfir23"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkButton children={<BsTelegram />} color={'#ffffff'} />
+          </a>
+          <a
+            href="http://github.com/gitRaduZamfir"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkButton children={<BsGithub />} color={'#ffffff'} />
+          </a>
+          <a
+            href="http://www.linkedin.com/in/radu-zamfir-713788271/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkButton children={<BsLinkedin />} color={'#ffffff'} />
+          </a>
         </div>
       </div>
     </div>

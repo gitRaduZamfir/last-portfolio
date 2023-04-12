@@ -1,12 +1,10 @@
-.projects {
-  background-color: var(--primaryBg);
-  height: 100%;
+.projects-header {
+  text-align: center;
+  margin: 4rem 3rem;
 }
 
-.projects-container {
-  padding: 4rem 3rem;
-}
-
-.project-text {
-  margin-bottom: 4rem;
+.projects-main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
