@@ -5,7 +5,7 @@ import location from '../img/location.png';
 
 function Contacts() {
   return (
-    <div className={styles.contacts}>
+    <div className={styles.contacts} id="contactsId">
       <div className={styles.textSection}>
         <h3>Contacts</h3>
         <h2>You can find me here:</h2>

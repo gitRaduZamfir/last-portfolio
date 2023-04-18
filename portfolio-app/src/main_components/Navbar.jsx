@@ -1,11 +1,15 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import { BiMenu } from 'react-icons/bi';
 import { GrFormClose } from 'react-icons/gr';
 import '../css/_navbar.css';
 
-function Navbar() {
+function Navbar({ scroll }) {
   const [showNavbar, setShowNavbar] = useState(false);
+  const [selected, setSelected] = useState(false);
+
+  const handleSelectedTab = (tabName) => {
+    setSelected(tabName);
+  };
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
@@ -14,7 +18,12 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="container">
-        <div className="logo">
+        <div
+          className="logo"
+          onClick={() => {
+            scroll('homeId');
+          }}
+        >
           <span>&#10100; zamfir.dev &#10101;</span>
         </div>
         <div
@@ -33,16 +42,57 @@ function Navbar() {
         <div className={`nav-elements ${showNavbar && 'active'}`}>
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <a
+                className={`${selected === 'home' ? 'tabClicked' : ''}`}
+                href="#home"
+                onClick={() => {
+                  scroll('homeId');
+                  handleShowNavbar();
+                  handleSelectedTab('home');
+                }}
+              >
+                Home
+              </a>
             </li>
             <li>
-              <NavLink to="/about">About</NavLink>
+              <a
+                className={`${selected === 'about' ? 'tabClicked' : ''}`}
+                href="#about"
+                onClick={() => {
+                  scroll('aboutId');
+                  handleShowNavbar();
+                  handleSelectedTab('about');
+                }}
+              >
+                About
+              </a>
             </li>
             <li>
-              <NavLink to="/projects">Projects</NavLink>
+              <a
+                clicked={selected}
+                className={`${selected === 'projects' ? 'tabClicked' : ''}`}
+                href="#projects"
+                onClick={() => {
+                  scroll('projectsId');
+                  handleShowNavbar();
+                  handleSelectedTab('projects');
+                }}
+              >
+                Projects
+              </a>
             </li>
             <li>
-              <NavLink to="/contacts">Contacts</NavLink>
+              <a
+                className={`${selected === 'contacts' ? 'tabClicked' : ''}`}
+                href="#contacts"
+                onClick={() => {
+                  scroll('contactsId');
+                  handleShowNavbar();
+                  handleSelectedTab('contacts');
+                }}
+              >
+                Contacts
+              </a>
             </li>
           </ul>
         </div>

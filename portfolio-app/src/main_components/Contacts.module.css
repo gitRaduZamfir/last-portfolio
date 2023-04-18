@@ -9,6 +9,7 @@ a {
 
 .textSection {
   margin-bottom: 3rem;
+  text-align: left;
 }
 
 .btnSection {
@@ -58,6 +59,9 @@ a {
 }
 
 @media screen and (max-width: 550px) {
+  .textSection {
+    text-align: center;
+  }
   .btnSection {
     flex-direction: column;
     justify-content: center;

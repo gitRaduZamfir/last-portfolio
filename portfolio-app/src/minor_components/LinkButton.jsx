@@ -7,6 +7,7 @@ function LinkButton({ children, color }) {
         className={styles.link}
         style={{ color: color }}
         target="_blanc"
+        rel="noreferrer"
       >
         {children}
       </i>

@@ -3,7 +3,7 @@ import desk from '../img/desk.jpg';
 
 function About() {
   return (
-    <div className="about">
+    <div className="about" id="aboutId">
       <div className="about-container">
         <section className="about-section">
           <div className="img-box">

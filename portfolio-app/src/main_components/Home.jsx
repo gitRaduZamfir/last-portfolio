@@ -5,7 +5,6 @@ import css from '../img/css.png';
 import javascript from '../img/javascript.png';
 import react from '../img/react.png';
 import tailwind from '../img/tailwind.png';
-import docker from '../img/docker.png';
 import git from '../img/git.png';
 import sass from '../img/sass.png';
 import '../css/_home.css';
@@ -13,7 +12,7 @@ import TechIcon from '../minor_components/TechIcon';
 
 function Home() {
   return (
-    <div className="home">
+    <div className="home" id="homeId">
       <div className="gridLg">
         <div className="textBox">
           <h1>Front-End React Developer</h1>
@@ -25,11 +24,15 @@ function Home() {
             <a
               href="https://www.linkedin.com/in/radu-zamfir-713788271/"
               target="_blank"
+              rel="noreferrer"
             >
               <LinkButton children={<BsLinkedin />} color={'#0B5FA2'} />
             </a>
-            <a href="https://github.com/gitRaduZamfir" target="-blanc">
-              {' '}
+            <a
+              href="https://github.com/gitRaduZamfir"
+              target="-blanc"
+              rel="noreferrer"
+            >
               <LinkButton children={<BsGithub />} color={'#000000'} />
             </a>
           </div>
@@ -48,7 +51,6 @@ function Home() {
           <TechIcon src={tailwind} alt={'tailwind-logo'} />
           <TechIcon src={sass} alt={'sass-logo'} />
           <TechIcon src={git} alt={'git-logo'} />
-          <TechIcon src={docker} alt={'docker-logo'} />
         </div>
       </div>
     </div>
