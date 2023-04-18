@@ -69,7 +69,6 @@ function Navbar({ scroll }) {
             </li>
             <li>
               <a
-                clicked={selected}
                 className={`${selected === 'projects' ? 'tabClicked' : ''}`}
                 href="#projects"
                 onClick={() => {
