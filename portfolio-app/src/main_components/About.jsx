@@ -1,5 +1,6 @@
 import '../css/_about.css';
 import desk from '../img/desk.jpg';
+import resume from '../download_files/Resume.pdf';
 
 function About() {
   return (
@@ -21,6 +22,9 @@ function About() {
               join your team and make meaningful contributions to the
               development of your projects.
             </p>
+            <a href={resume} download>
+              <button className="download-btn">Download My Resume</button>
+            </a>
           </div>
         </section>
       </div>
